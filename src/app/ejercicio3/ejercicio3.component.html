@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>Sueldo mensual del empleado</h1> 
+    <div class="row">
+          <div class="col-2">
+              <label for="tipoEmpleado">Tipo de empleado</label>
+          </div>
+          <div class="col-md-4">
+              <select name="" id="tipoEmpleado" class="form-control">
+                  <option value="0">Seleccione el tipo de empleado</option>
+                  <option value="1">Base</option>
+                  <option value="2">Confianza</option>
+                  <option value="3">Honorarios</option>
+                  <option value="4">Eventual</option>
+              </select>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-2">
+              <label for="diasLaborales">Dias laborales</label>
+          </div>
+          <div class="col-md-4">
+              <input type="number" name="" id="diasLaborales" class="form-control" min="0" max="28" placeholder="Ingrese la cantidad de dias">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-2">
+              <label for="diasLaborales">Sueldo del mes:</label>
+          </div>
+          <div class="col-md-4">
+              <input type="text" name="" id="sueldoBase" class="form-control" disabled>
+          </div>
+          <div class="col">
+              <button class="btn btn-success" onclick="calcularSueldo();">Calcular sueldo mensual</button>
+          </div>
+      </div>
+  </div>

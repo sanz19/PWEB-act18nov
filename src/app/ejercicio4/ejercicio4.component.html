@@ -1,0 +1,45 @@
+<div class="container">
+    <h1>Tienda En Línea</h1> 
+    <div class="row">
+          <div class="col-2">
+              <label for="departamento">Departamento</label>
+          </div>
+          <div class="col-md-4">
+              <select name="" id="departamento" class="form-control">
+                  <option value="0">Seleccione el departamento</option>
+                  <option value="1">Electrónica</option>
+                  <option value="2">Jardinería</option>
+                  <option value="3">Herramientas</option>
+                  <option value="4">Línea Blanca</option>
+                  <option value="5">Otro departamento</option>
+              </select>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-2">
+              <label for="precioArticulo">Costo del artículo</label>
+          </div>
+          <div class="col-md-4">
+              <input type="number" name="" id="precioArticulo" class="form-control" min="1" placeholder="Ingrese el monto del artículo">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-2">
+              <label for="eMoney">Dinero electrónico:</label>
+          </div>
+          <div class="col-md-4">
+              <input type="text" name="" id="eMoney" class="form-control" disabled>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-2">
+              <label for="puntosGenerados">Puntos generados:</label>
+          </div>
+          <div class="col-md-4">
+              <input type="text" name="" id="puntosTotal" class="form-control" disabled>
+          </div>
+          <div class="col">
+              <button class="btn btn-success" onclick="calcular();">Calcular</button>
+          </div>
+      </div>
+  </div>
