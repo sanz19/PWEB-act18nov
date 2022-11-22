@@ -1,6 +1,8 @@
 <nav class="navbar bg-light">
     <form class="container-fluid justify-content-start">
-      <button class="btn btn-outline-success me-2" type="button">Sueldo mensual del empleado</button>
-      <button class="btn btn-sm btn-outline-secondary" type="button">Tienda En Línea</button>
+    <a class="navbar-brand" >ra.sanz19</a>
+      <button class="btn btn-outline-success me-2" type="button" [routerLink]="['/ejercicio3']" >Sueldo mensual</button>
+      <button class="btn btn-outline-secondary me-2" type="button" [routerLink]="['/ejercicio4']">Tienda en línea</button>
     </form>
 </nav>
+<router-outlet></router-outlet>

@@ -2,10 +2,10 @@
     <h1>Sueldo mensual del empleado</h1> 
     <div class="row">
           <div class="col-2">
-              <label for="tipoEmpleado">Tipo de empleado</label>
+              <label>Tipo de empleado</label>
           </div>
           <div class="col-md-4">
-              <select name="" id="tipoEmpleado" class="form-control">
+              <select #tipoEmpleado (change)="onSelected(tipoEmpleado.value)" class="form-control">
                   <option value="0">Seleccione el tipo de empleado</option>
                   <option value="1">Base</option>
                   <option value="2">Confianza</option>
@@ -16,21 +16,22 @@
       </div>
       <div class="row">
           <div class="col-2">
-              <label for="diasLaborales">Dias laborales</label>
+              <label>Dias laborales</label>
           </div>
           <div class="col-md-4">
-              <input type="number" name="" id="diasLaborales" class="form-control" min="0" max="28" placeholder="Ingrese la cantidad de dias">
+              <input type="number" [(ngModel)]="diasLaborales" class="form-control" min="0" max="28" placeholder="Ingrese la cantidad de dias">
           </div>
       </div>
       <div class="row">
           <div class="col-2">
-              <label for="diasLaborales">Sueldo del mes:</label>
+              <label>Sueldo del mes:</label>
           </div>
           <div class="col-md-4">
-              <input type="text" name="" id="sueldoBase" class="form-control" disabled>
+              <input type="text" [(ngModel)]="sueldoBase" class="form-control" disabled>
           </div>
           <div class="col">
-              <button class="btn btn-success" onclick="calcularSueldo();">Calcular sueldo mensual</button>
-          </div>
+            <button class="btn btn-success" (click)="calcularSueldo();">Calcular</button>
+            <button class="btn btn-warning" (click)="limpiar();">Limpiar</button>
+        </div>
       </div>
   </div>

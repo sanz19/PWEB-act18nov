@@ -5,7 +5,7 @@
               <label for="departamento">Departamento</label>
           </div>
           <div class="col-md-4">
-              <select name="" id="departamento" class="form-control">
+              <select #departamento (change)="onSelected(departamento.value)" class="form-control">
                   <option value="0">Seleccione el departamento</option>
                   <option value="1">Electrónica</option>
                   <option value="2">Jardinería</option>
@@ -17,29 +17,30 @@
       </div>
       <div class="row">
           <div class="col-2">
-              <label for="precioArticulo">Costo del artículo</label>
+              <label>Costo del artículo</label>
           </div>
           <div class="col-md-4">
-              <input type="number" name="" id="precioArticulo" class="form-control" min="1" placeholder="Ingrese el monto del artículo">
+              <input type="number" [(ngModel)]="precioArticulo" class="form-control" min="1" placeholder="Ingrese el monto del artículo">
           </div>
       </div>
       <div class="row">
           <div class="col-2">
-              <label for="eMoney">Dinero electrónico:</label>
+              <label>Dinero electrónico:</label>
           </div>
           <div class="col-md-4">
-              <input type="text" name="" id="eMoney" class="form-control" disabled>
+              <input type="text" [(ngModel)]="eMoney" class="form-control" disabled>
           </div>
       </div>
       <div class="row">
           <div class="col-2">
-              <label for="puntosGenerados">Puntos generados:</label>
+              <label>Puntos generados:</label>
           </div>
           <div class="col-md-4">
-              <input type="text" name="" id="puntosTotal" class="form-control" disabled>
+              <input type="text" [(ngModel)]="puntosTotal" class="form-control" disabled>
           </div>
           <div class="col">
-              <button class="btn btn-success" onclick="calcular();">Calcular</button>
+              <button class="btn btn-success" (click)="calcular();">Calcular</button>
+              <button class="btn btn-warning" (click)="limpiar();">Limpiar</button>
           </div>
       </div>
   </div>
